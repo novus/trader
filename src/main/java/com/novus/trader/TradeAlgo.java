@@ -1,6 +1,7 @@
 package com.novus.trader;
 
 import com.novus.tradesim.*;
+import java.util.List;
 import java.util.Map;
 
 public class TradeAlgo extends ManagedAlgo {
@@ -20,8 +21,9 @@ public class TradeAlgo extends ManagedAlgo {
         Double balance = state.balance();
         Map<String, Integer> positions = state.positions();
         Map<String, Double> securities = state.securities();
+        Map<String, List<Double>> historical = state.historicalPrices();
 
-        // TODO magic
+        // TODO your algorithm!
 
         return null;
     }
