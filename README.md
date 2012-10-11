@@ -1,6 +1,6 @@
 trader
 ======
 
-`chris$ ./sbt`
+Start SBT: `chris$ ./sbt`
 
-`run-main com.novus.tradesim.algo.Client`
+Run your algorithm against the market: `run <user> <password> <host> <port>`

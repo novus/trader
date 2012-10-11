@@ -3,13 +3,10 @@ package com.novus.trader;
 import com.novus.tradesim.*;
 import java.util.List;
 import java.util.Map;
-import java.util.LinkedList;
 
 public class TradeAlgo extends ManagedAlgo {
 	
-	/**
-	 * The training data for your algorithm. Maps a security id to a list of prices. 
-	 */
+	/** The training data for your algorithm. Maps a security id to a list of prices. */
     final Map<String, List<Double>> data = super.getTrainingData();
 
     /** The name of your algorithm. */
@@ -32,16 +29,17 @@ public class TradeAlgo extends ManagedAlgo {
 
         return null;
     }
-    
+
     /**
-     * 
-     * TradeRequest is constructed as: 
-     * 		new TradeRequest(
-     * 			   int bidQuantity, 
-     * 			   double bidPrice,
-     *             int askQuantity,
-     *             double askPrice)
-     * 
+     * Create a trade request.
+     *
+     * @param bidQuantity   The number of shares you wish to buy.
+     * @param bidPrice      The price per share you are willing to pay.
+     * @param askQuantity   The number of shares you wish to sell.
+     * @param askPrice      The price per share you require.
      */
+    public TradeRequest makeTradeRequest(int bidQuantity, double bidPrice, int askQuantity, double askPrice) {
+        return new TradeRequest(bidQuantity, bidPrice, askQuantity, askPrice);
+    }
   
 }
