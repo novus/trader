@@ -3,7 +3,6 @@ package com.novus.trader;
 import com.novus.tradesim.*;
 import java.util.List;
 import java.util.Map;
-import java.util.LinkedList;
 
 public class TradeAlgo extends ManagedAlgo {
 	
