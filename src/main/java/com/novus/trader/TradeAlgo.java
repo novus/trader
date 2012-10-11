@@ -31,5 +31,16 @@ public class TradeAlgo extends ManagedAlgo {
 
         return null;
     }
+    
+    /**
+     * 
+     * TradeRequest is constructed as: 
+     * 		new TradeRequest(
+     * 			   int bidQuantity, 
+     * 			   double bidPrice,
+     *             int askQuantity,
+     *             double askPrice)
+     * 
+     */
   
 }
