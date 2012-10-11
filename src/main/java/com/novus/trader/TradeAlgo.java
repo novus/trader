@@ -3,10 +3,14 @@ package com.novus.trader;
 import com.novus.tradesim.*;
 import java.util.List;
 import java.util.Map;
+import java.util.LinkedList;
 
 public class TradeAlgo extends ManagedAlgo {
-
-    final Map<String, List<Double>> historicalPrices = super.getHistoricalPrices();
+	
+	/**
+	 * The training data for your algorithm. Maps a security id to a list of prices. 
+	 */
+    final Map<String, List<Double>> data = super.getTrainingData();
 
     /** The name of your algorithm. */
     public String getName() {
@@ -19,7 +23,7 @@ public class TradeAlgo extends ManagedAlgo {
      * from the server, which includes your current balance, positions, and the current
      * prices of the market securities.
      */
-    public Map<String, BidAsk> onMarketUpdate(TraderState state) {
+    public Map<String, TradeRequest> onMarketUpdate(TraderState state) {
         Double balance = state.balance();
         Map<String, Integer> positions = state.positions();
         Map<String, Double> securities = state.securities();
@@ -28,5 +32,5 @@ public class TradeAlgo extends ManagedAlgo {
 
         return null;
     }
-
+  
 }
