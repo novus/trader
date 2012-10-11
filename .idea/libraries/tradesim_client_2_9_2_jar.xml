@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tradesim-client_2.9.2.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/tradesim-client_2.9.2.jar!/"></root>
+    </CLASSES>
+    <JAVADOC> </JAVADOC>
+    <SOURCES> </SOURCES>
+  </library>
+</component>

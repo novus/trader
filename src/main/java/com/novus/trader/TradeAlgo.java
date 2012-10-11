@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class TradeAlgo extends ManagedAlgo {
 
+    final Map<String, List<Double>> historicalPrices = super.getHistoricalPrices();
+
     /** The name of your algorithm. */
     public String getName() {
         return "Trends";
@@ -21,7 +23,6 @@ public class TradeAlgo extends ManagedAlgo {
         Double balance = state.balance();
         Map<String, Integer> positions = state.positions();
         Map<String, Double> securities = state.securities();
-        Map<String, List<Double>> historical = state.historicalPrices();
 
         // TODO your algorithm!
 
