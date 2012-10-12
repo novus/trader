@@ -1,13 +1,17 @@
 package com.novus.trader;
 
 import com.novus.tradesim.*;
-import java.util.List;
-import java.util.Map;
+import java.util.*
 
 public class TradeAlgo extends ManagedAlgo {
 	
 	/** The training data for your algorithm. Maps a security id to a list of prices. */
-    final Map<String, List<Double>> data = super.getTrainingData();
+    private final Map<String, List<Double>> trainingData;
+
+    /** The required constructor. */
+    public TradeAlgo(Map<String, List<Double>> data) {
+        trainingData = data;
+    }
 
     /** The name of your algorithm. */
     public String getName() {
