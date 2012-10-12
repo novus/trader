@@ -1,7 +1,7 @@
 package com.novus.trader;
 
 import com.novus.tradesim.*;
-import java.util.*
+import java.util.*;
 
 public class TradeAlgo extends ManagedAlgo {
 	
